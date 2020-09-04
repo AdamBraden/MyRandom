@@ -33,6 +33,7 @@
   <ItemGroup>
     <None Include="PropertySheet.props" />
     <None Include="packages.config" />
+    <None Include="WinRT.Host.runtimeconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CppTestApp.rc">

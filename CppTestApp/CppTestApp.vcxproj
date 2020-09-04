@@ -112,10 +112,13 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
+    <None Include="WinRT.Host.runtimeconfig.json">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MyRandom">
-      <HintPath>..\MyRandom\bin\Debug\net5.0-windows10.0.19041.0\MyRandom.winmd</HintPath>
+      <HintPath>..\MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\MyRandom.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
   </ItemGroup>

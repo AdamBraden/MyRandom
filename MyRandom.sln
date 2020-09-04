@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsTestApp", "CsTestApp\CsTestApp.csproj", "{853B89A9-C9FB-45FA-AC7B-1289EEED94F9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppTestApp", "CppTestApp\CppTestApp.vcxproj", "{19DF5E89-CB87-4E52-ABF3-1774CA549871}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E409A5F7-657B-4616-900F-E6BAC4DECCB1} = {E409A5F7-657B-4616-900F-E6BAC4DECCB1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
