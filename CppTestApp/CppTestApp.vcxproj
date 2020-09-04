@@ -101,6 +101,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -117,6 +118,12 @@
       <HintPath>..\MyRandom\bin\Debug\net5.0-windows10.0.19041.0\MyRandom.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CppTestApp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="CppTestApp.exe.manifest" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
