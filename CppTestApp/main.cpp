@@ -10,7 +10,7 @@ int main()
 
     NumberGenerator numGenerator;
     printf("Unbounded Number     : %d\n", numGenerator.GetInteger());
-    printf("Bounded Number (0,10): %d\n", numGenerator.GetInteger(0, 100));
+    printf("Bounded Number (0,10): %d\n", numGenerator.GetIntegerWithinRange(0, 10));
 
     MessageOfTheDayGenerator messageOfTheDayGenerator;
     printf("Message: %ls\n", messageOfTheDayGenerator.MessageOfTheDay().c_str());
