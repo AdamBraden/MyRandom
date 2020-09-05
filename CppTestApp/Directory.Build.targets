@@ -4,6 +4,7 @@
     <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\WinRT.Runtime.dll" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\WinRT.Host.dll" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\WinRT.Host.Shim.dll" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\Microsoft.Windows.SDK.NET.dll" DestinationFolder="$(OutputPath)" />
   </Target>
 
 </Project>
