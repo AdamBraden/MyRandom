@@ -1,8 +1,13 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
+  <PropertyGroup>
+    <_Runtime-Platform>$(Platform)</_Runtime-Platform>
+    <_Runtime-Platform Condition="'$(Platform)' == 'Win32'">x86</_Runtime-Platform>
+  </PropertyGroup>
+  
   <Target Name="CopyHost" AfterTargets="AfterBuild">
     <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\WinRT.Runtime.dll" DestinationFolder="$(OutputPath)" />
-    <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\WinRT.Host.dll" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\runtimes\win10-$(_Runtime-Platform)\native\WinRT.Host.dll" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\WinRT.Host.Shim.dll" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="$(SolutionDir)MyRandom\bin\$(Configuration)\net5.0-windows10.0.19041.0\Microsoft.Windows.SDK.NET.dll" DestinationFolder="$(OutputPath)" />
   </Target>

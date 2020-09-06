@@ -12,7 +12,6 @@
   <Target Name="CopyWinMD" AfterTargets="AfterBuild" Condition="$(CsWinRTComponent)==true">
     <Copy SourceFiles="$(GeneratedFilesDir)$(AssemblyName).winmd" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="$(CsWinRTPath)lib\net5.0\WinRT.Runtime.dll" DestinationFolder="$(OutputPath)" />
-    <Copy SourceFiles="$(CsWinRTPath)lib\net5.0\WinRT.Host.dll" DestinationFolder="$(OutputPath)" />
     <Copy SourceFiles="$(CsWinRTPath)lib\net5.0\WinRT.Host.Shim.dll" DestinationFolder="$(OutputPath)" />
   </Target>
 
