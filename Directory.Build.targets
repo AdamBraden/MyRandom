@@ -1,0 +1,18 @@
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies Condition="$(CsWinRTComponent)==true">true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" RuntimeFrameworkVersion="10.0.19041.3-preview" />
+    <FrameworkReference Update="Microsoft.Windows.SDK.NET.Ref" TargetingPackVersion="10.0.19041.3-preview" />
+  </ItemGroup>
+
+  <Target Name="CopyWinMD" AfterTargets="AfterBuild" Condition="$(CsWinRTComponent)==true">
+    <Copy SourceFiles="$(GeneratedFilesDir)$(AssemblyName).winmd" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="$(CsWinRTPath)lib\net5.0\WinRT.Runtime.dll" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="$(CsWinRTPath)lib\net5.0\WinRT.Host.Shim.dll" DestinationFolder="$(OutputPath)" />
+  </Target>
+
+</Project>

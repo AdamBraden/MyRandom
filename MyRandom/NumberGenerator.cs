@@ -13,9 +13,9 @@ namespace MyRandom
 
         public int GetInteger()
         {
-            return GetInteger(0, int.MaxValue);
+            return GetIntegerWithinRange(0, int.MaxValue);
         }
-        public int GetInteger(int Min, int Max)
+        public int GetIntegerWithinRange(int Min, int Max)
         {
             if (_rand is null) { _rand = new Random(); }
             return _rand.Next(Min, Max);
